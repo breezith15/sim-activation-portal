@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Proof | SIMPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar compact-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>SIMPulse</strong><small>Activation Portal</small></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Overview</a><a href="customer.html">Customer</a><a href="validation.html">SIM Management</a><a href="offers.html">Offers</a><a href="address.html">Address</a><a href="id-proof.html" class="active">ID Proof</a><a href="activation.html">Activate</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div><p class="eyebrow">Step 03B</p><h1>ID proof verification</h1><p>Save a valid government ID proof for an existing customer and validate that record before activation.</p></div>
+        <div class="banner-badge amber-badge"><span>03</span><strong>ID Proof</strong><small>Verification</small></div>
+      </section>
+
+      <section class="content-grid two-column">
+        <div class="panel form-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Identity record</p><h2>Verify customer ID proof</h2></div><span class="secure-badge">● Verification step</span></div>
+          <div class="form-grid single-column">
+            <div class="field"><label for="id">Customer ID</label><input id="id" type="number" placeholder="Enter existing customer ID"></div>
+            <div class="field"><label for="idProof">Government ID Proof Number</label><input id="idProof" type="text" placeholder="Aadhaar / Passport / Driving Licence"></div>
+          </div>
+          <div class="button-row two">
+            <button class="btn btn-primary" type="button" onclick="updateIdProof()">Save ID Proof <span>→</span></button>
+            <button class="btn btn-secondary" type="button" onclick="validateId()">Validate ID Proof</button>
+          </div>
+          <div id="responseBox" class="response" role="status" aria-live="polite"></div>
+        </div>
+
+        <aside class="panel identity-panel">
+          <div class="identity-illustration"><div class="id-card-icon"><span>SIM</span><strong>ID</strong><small>VERIFIED</small></div></div>
+          <p class="eyebrow">Verification checklist</p>
+          <h3>Keep the record ready for activation.</h3>
+          <div class="check-list">
+            <div><span>✓</span><p>Customer ID exists in the database.</p></div>
+            <div><span>✓</span><p>ID proof number is entered before saving.</p></div>
+            <div><span>✓</span><p>Validate the proof before the final activation stage.</p></div>
+          </div>
+          <a class="inline-link" href="activation.html">Continue to activation →</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div><strong>SIMPulse</strong><span>Modern SIM operations made simple.</span></div><span>© 2026 SIM Activation Portal</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

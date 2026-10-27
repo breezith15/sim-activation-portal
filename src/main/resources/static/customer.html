@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Management | SIMPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar compact-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>SIMPulse</strong><small>Activation Portal</small></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Overview</a><a href="customer.html" class="active">Customer</a><a href="validation.html">SIM Management</a><a href="offers.html">Offers</a><a href="address.html">Address</a><a href="id-proof.html">ID Proof</a><a href="activation.html">Activate</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div><p class="eyebrow">Step 01</p><h1>Customer management</h1><p>Create a customer profile and validate the details before continuing the activation workflow.</p></div>
+        <div class="banner-badge"><span>01</span><strong>Customer</strong><small>Profile & verification</small></div>
+      </section>
+
+      <section class="workflow-bar">
+        <div class="workflow-step current"><span>01</span><div><strong>Customer</strong><small>Profile</small></div></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-step"><span>02</span><div><strong>SIM</strong><small>Management</small></div></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-step"><span>03</span><div><strong>Verify</strong><small>Address / ID</small></div></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-step"><span>04</span><div><strong>Activate</strong><small>Complete</small></div></div>
+      </section>
+
+      <section class="content-grid two-column">
+        <div class="panel form-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Customer profile</p><h2>Create new customer</h2></div><span class="secure-badge">● Required fields</span></div>
+
+          <div class="form-grid">
+            <div class="field"><label for="firstName">First Name</label><input id="firstName" type="text" placeholder="Enter first name" autocomplete="given-name"></div>
+            <div class="field"><label for="lastName">Last Name</label><input id="lastName" type="text" placeholder="Enter last name" autocomplete="family-name"></div>
+            <div class="field full"><label for="email">Email Address</label><input id="email" type="email" placeholder="name@example.com" autocomplete="email"></div>
+            <div class="field"><label for="dob">Date of Birth</label><input id="dob" type="date"></div>
+            <div class="field"><label for="mobileNumber">Mobile Number</label><input id="mobileNumber" type="text" placeholder="Enter mobile number" inputmode="numeric" maxlength="15"></div>
+            <div class="field full"><label for="address">Address</label><textarea id="address" placeholder="Enter complete address"></textarea></div>
+            <div class="field full"><label for="idProof">ID Proof</label><input id="idProof" type="text" placeholder="Enter government ID proof number"></div>
+          </div>
+
+          <div class="button-row three">
+            <button class="btn btn-primary" type="button" onclick="addCustomer()">Save Customer <span>→</span></button>
+            <button class="btn btn-secondary" type="button" onclick="validateCustomer()">Validate Email + DOB</button>
+            <button class="btn btn-secondary" type="button" onclick="validateDetails()">Validate Details</button>
+          </div>
+          <div id="responseBox" class="response" role="status" aria-live="polite"></div>
+        </div>
+
+        <aside class="panel side-panel">
+          <div class="side-icon">◇</div>
+          <p class="eyebrow">Why this step matters</p>
+          <h3>Build the customer record first.</h3>
+          <p>The generated Customer ID is used later when you add a SIM, update the address or save an ID proof.</p>
+          <div class="info-list">
+            <div><span>01</span><p>Save the customer and note the generated Customer ID.</p></div>
+            <div><span>02</span><p>Use email + DOB or name details for validation.</p></div>
+            <div><span>03</span><p>Continue to SIM Management with the same Customer ID.</p></div>
+          </div>
+          <a class="inline-link" href="validation.html">Continue to SIM Management →</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div><strong>SIMPulse</strong><span>Modern SIM operations made simple.</span></div><span>© 2026 SIM Activation Portal</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

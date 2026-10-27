@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIM Management | SIMPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar compact-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>SIMPulse</strong><small>Activation Portal</small></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Overview</a><a href="customer.html">Customer</a><a href="validation.html" class="active">SIM Management</a><a href="offers.html">Offers</a><a href="address.html">Address</a><a href="id-proof.html">ID Proof</a><a href="activation.html">Activate</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div><p class="eyebrow">Step 02</p><h1>SIM management</h1><p>Link a SIM to an existing customer, verify its state and manage activation from one workspace.</p></div>
+        <div class="banner-badge sim-badge"><span>02</span><strong>SIM</strong><small>Inventory & status</small></div>
+      </section>
+
+      <section class="workflow-bar">
+        <div class="workflow-step done"><span>✓</span><div><strong>Customer</strong><small>Profile</small></div></div>
+        <div class="workflow-line done"></div>
+        <div class="workflow-step current"><span>02</span><div><strong>SIM</strong><small>Management</small></div></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-step"><span>03</span><div><strong>Verify</strong><small>Address / ID</small></div></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-step"><span>04</span><div><strong>Activate</strong><small>Complete</small></div></div>
+      </section>
+
+      <section class="content-grid two-column">
+        <div class="panel form-panel">
+          <div class="panel-heading"><div><p class="eyebrow">SIM inventory</p><h2>Add a SIM</h2></div><span class="secure-badge">● Customer required</span></div>
+          <div class="form-grid">
+            <div class="field"><label for="customerId">Customer ID</label><input id="customerId" type="number" placeholder="Existing customer ID"></div>
+            <div class="field"><label for="simNumber">SIM Number</label><input id="simNumber" type="text" placeholder="Example: SIM1004"></div>
+            <div class="field"><label for="iccid">ICCID</label><input id="iccid" type="text" placeholder="Enter ICCID"></div>
+            <div class="field"><label for="imei">IMEI</label><input id="imei" type="text" placeholder="Enter IMEI"></div>
+            <div class="field"><label for="mobileNumber">Mobile Number</label><input id="mobileNumber" type="text" placeholder="Customer mobile number" inputmode="numeric"></div>
+            <div class="field"><label for="networkType">Network Type</label><select id="networkType"><option value="">Select network</option><option>4G</option><option>5G</option></select></div>
+            <div class="field full"><label for="planName">Plan Name</label><select id="planName"><option value="">Select plan</option><option>Daily Data 399</option><option>Unlimited 599</option><option>Premium 799</option></select></div>
+          </div>
+          <button class="btn btn-primary" type="button" onclick="addSim()">Add SIM to Customer <span>→</span></button>
+
+          <div class="divider-label"><span>SIM operations</span></div>
+          <p class="helper-text">Enter a SIM Number above, then choose the operation you want to perform.</p>
+          <div class="operation-grid">
+            <button class="btn btn-secondary" type="button" onclick="validateSim()"><span>✓</span> Validate</button>
+            <button class="btn btn-secondary" type="button" onclick="activateSim()"><span>↗</span> Activate</button>
+            <button class="btn btn-secondary" type="button" onclick="deactivateSim()"><span>◌</span> Deactivate</button>
+            <button class="btn btn-danger" type="button" onclick="deleteSim()"><span>×</span> Delete</button>
+          </div>
+          <div id="responseBox" class="response" role="status" aria-live="polite"></div>
+        </div>
+
+        <aside class="panel status-panel">
+          <div class="panel-heading"><div><p class="eyebrow">SIM status</p><h2>Management guide</h2></div><span class="status-tag">DB CONNECTED</span></div>
+          <div class="status-hero"><div class="sim-chip">SIM</div><div><strong>Keep each SIM linked to a valid customer.</strong><p>The backend stores the SIM data in the MySQL database.</p></div></div>
+          <div class="status-cards">
+            <div><span>Customer ID</span><strong>Required</strong></div>
+            <div><span>Activation</span><strong>On demand</strong></div>
+            <div><span>Network</span><strong>4G / 5G</strong></div>
+            <div><span>Offers</span><strong>Active SIM only</strong></div>
+          </div>
+          <div class="tip-box"><strong>Tip</strong><p>If you see “SIM not found”, add the SIM first or confirm the SIM Number exists in the <code>sim</code> table.</p></div>
+          <a class="inline-link" href="activation.html">Go to final activation →</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div><strong>SIMPulse</strong><span>Modern SIM operations made simple.</span></div><span>© 2026 SIM Activation Portal</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

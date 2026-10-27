@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Offers | SIMPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar compact-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>SIMPulse</strong><small>Activation Portal</small></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Overview</a><a href="customer.html">Customer</a><a href="validation.html">SIM Management</a><a href="offers.html" class="active">Offers</a><a href="address.html">Address</a><a href="id-proof.html">ID Proof</a><a href="activation.html">Activate</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div><p class="eyebrow">Rewards</p><h1>Special offers</h1><p>Enter an activated SIM Number to retrieve the offer provided by the portal backend.</p></div>
+        <div class="banner-badge pink-badge"><span>★</span><strong>Offers</strong><small>Active SIM only</small></div>
+      </section>
+
+      <section class="offer-layout">
+        <div class="panel offer-query-panel">
+          <div class="offer-icon">✦</div>
+          <p class="eyebrow">Offer lookup</p>
+          <h2>Find a SIM offer</h2>
+          <p>Offers are based on the plan assigned to the SIM. Inactive SIMs are not eligible for promotional offers.</p>
+          <label for="simNumber">SIM Number</label>
+          <input id="simNumber" type="text" placeholder="Example: SIM1003">
+          <button class="btn btn-primary" type="button" onclick="getOffers()">View Available Offers <span>→</span></button>
+          <div id="responseBox" class="response" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="offer-showcase">
+          <div class="offer-card featured"><span class="offer-tag">POPULAR</span><strong>Unlimited 599</strong><h3>Entertainment boost</h3><p>Backend offer includes a free OTT subscription for eligible activated SIMs.</p><span class="offer-arrow">↗</span></div>
+          <div class="offer-card"><span class="offer-tag">DAILY</span><strong>Daily Data 399</strong><h3>Extra data</h3><p>Backend offer includes free 2GB/day for 30 days.</p><span class="offer-arrow">↗</span></div>
+          <div class="offer-card"><span class="offer-tag">PREMIUM</span><strong>Premium 799</strong><h3>5G + OTT</h3><p>Backend offer includes unlimited 5G, OTT and 500 SMS/day.</p><span class="offer-arrow">↗</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div><strong>SIMPulse</strong><span>Modern SIM operations made simple.</span></div><span>© 2026 SIM Activation Portal</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

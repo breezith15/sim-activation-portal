@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activate SIM | SIMPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar compact-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>SIMPulse</strong><small>Activation Portal</small></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Overview</a><a href="customer.html">Customer</a><a href="validation.html">SIM Management</a><a href="offers.html">Offers</a><a href="address.html">Address</a><a href="id-proof.html">ID Proof</a><a href="activation.html" class="active">Activate</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner activation-banner">
+        <div><p class="eyebrow">Final step</p><h1>Activate your SIM</h1><p>Enter the SIM Number to complete the activation. Previous customer, address and ID steps should already be completed.</p></div>
+        <div class="banner-badge violet-badge"><span>04</span><strong>Activation</strong><small>Final stage</small></div>
+      </section>
+
+      <section class="content-grid activation-grid">
+        <div class="panel activation-panel">
+          <div class="activation-ring"><div class="ring-core"><span>SIM</span><strong>ON</strong></div></div>
+          <p class="eyebrow">Ready when you are</p>
+          <h2>Complete SIM activation</h2>
+          <p class="lead">Enter the exact SIM Number stored in your database. Activation changes the SIM state to active.</p>
+          <label for="simNumber">SIM Number</label>
+          <input id="simNumber" type="text" placeholder="Enter SIM Number">
+          <button class="btn btn-primary btn-large" type="button" onclick="activateSim()">Activate SIM <span>→</span></button>
+          <div id="responseBox" class="response" role="status" aria-live="polite"></div>
+        </div>
+
+        <aside class="panel activation-guide">
+          <p class="eyebrow">Activation checklist</p>
+          <h3>Complete these checks first.</h3>
+          <div class="activation-checks">
+            <div><span>✓</span><div><strong>Customer exists</strong><small>Customer ID is available.</small></div></div>
+            <div><span>✓</span><div><strong>SIM exists</strong><small>SIM is already added to inventory.</small></div></div>
+            <div><span>✓</span><div><strong>Details verified</strong><small>Address and ID proof are updated.</small></div></div>
+            <div class="pending"><span>○</span><div><strong>SIM activation</strong><small>This is the final action.</small></div></div>
+          </div>
+          <div class="tip-box"><strong>Need to add a SIM?</strong><p>Open SIM Management and create the SIM record before using this page.</p><a class="inline-link" href="validation.html">Open SIM Management →</a></div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div><strong>SIMPulse</strong><span>Modern SIM operations made simple.</span></div><span>© 2026 SIM Activation Portal</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

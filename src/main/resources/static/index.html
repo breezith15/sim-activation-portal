@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern SIM activation and customer management portal">
+  <title>SIMPulse | SIM Activation Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="SIMPulse home">
+        <span class="brand-mark">S</span>
+        <span>
+          <strong>SIMPulse</strong>
+          <small>Activation Portal</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Overview</a>
+        <a href="customer.html">Customer</a>
+        <a href="validation.html">SIM Management</a>
+        <a href="offers.html">Offers</a>
+        <a href="address.html">Address</a>
+        <a href="id-proof.html">ID Proof</a>
+        <a href="activation.html">Activate</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero-home">
+        <div class="hero-content">
+          <div class="status-pill"><span class="status-dot"></span> Portal ready</div>
+          <p class="eyebrow">Fast • Guided • Reliable</p>
+          <h1>Activate every SIM with a <span>cleaner, smarter</span> workflow.</h1>
+          <p class="hero-text">
+            Register customers, manage SIM inventory, verify documents, update addresses and complete activation from one simple workspace.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="validation.html">Start SIM Management <span>→</span></a>
+            <a class="btn btn-ghost" href="customer.html">Add a Customer</a>
+          </div>
+          <div class="hero-meta">
+            <span>✓ Responsive dashboard</span>
+            <span>✓ Real-time database counts</span>
+            <span>✓ Spring Boot + MySQL</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-orb orb-one"></div>
+          <div class="visual-orb orb-two"></div>
+          <div class="activation-card glass-card">
+            <div class="mini-header">
+              <div>
+                <span class="eyebrow">Live operations</span>
+                <h3>Activation overview</h3>
+              </div>
+              <span class="live-chip">LIVE</span>
+            </div>
+            <div class="mini-stat-grid">
+              <div class="mini-stat">
+                <span>Customers</span>
+                <strong id="customerCount">0</strong>
+              </div>
+              <div class="mini-stat">
+                <span>Total SIMs</span>
+                <strong id="simCount">0</strong>
+              </div>
+            </div>
+            <div class="progress-block">
+              <div class="progress-label"><span>Activation rate</span><strong id="activationRate">0%</strong></div>
+              <div class="progress-track"><span id="activationProgress"></span></div>
+            </div>
+            <div class="status-row">
+              <div><span class="signal-icon">✓</span><span>Activated SIMs</span></div>
+              <strong id="activatedCount">0</strong>
+            </div>
+            <div class="status-row muted-row">
+              <div><span class="signal-icon muted-icon">○</span><span>Inactive SIMs</span></div>
+              <strong id="inactiveCount">0</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-heading">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2>A simple flow from customer to activation.</h2>
+        </div>
+        <p>Complete each stage in order, or jump directly to the module you need.</p>
+      </section>
+
+      <section class="step-grid">
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <div class="step-icon">◈</div>
+          <h3>Customer</h3>
+          <p>Create the customer record and validate personal details.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <div class="step-icon">◎</div>
+          <h3>SIM</h3>
+          <p>Add, validate and manage SIM inventory linked to a customer.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <div class="step-icon">⌂</div>
+          <h3>Verify</h3>
+          <p>Update address and record government ID proof securely.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">04</span>
+          <div class="step-icon">↗</div>
+          <h3>Activate</h3>
+          <p>Activate the SIM and unlock eligible promotional offers.</p>
+        </div>
+      </section>
+
+      <section class="section-heading module-heading">
+        <div>
+          <p class="eyebrow">Portal modules</p>
+          <h2>Everything is one click away.</h2>
+        </div>
+      </section>
+
+      <section class="module-grid">
+        <a class="module-card accent-blue" href="customer.html">
+          <div class="module-icon">01</div>
+          <div><h3>Customer Management</h3><p>Add and validate customers.</p></div>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="module-card accent-violet" href="validation.html">
+          <div class="module-icon">02</div>
+          <div><h3>SIM Management</h3><p>Add, validate, activate or delete SIMs.</p></div>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="module-card accent-cyan" href="address.html">
+          <div class="module-icon">03</div>
+          <div><h3>Address Update</h3><p>Keep customer details current.</p></div>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="module-card accent-amber" href="id-proof.html">
+          <div class="module-icon">04</div>
+          <div><h3>ID Proof</h3><p>Save and validate a customer ID proof.</p></div>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="module-card accent-green" href="offers.html">
+          <div class="module-icon">05</div>
+          <div><h3>Special Offers</h3><p>Check offers for activated SIMs.</p></div>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="module-card accent-pink" href="activation.html">
+          <div class="module-icon">06</div>
+          <div><h3>Instant Activation</h3><p>Complete the final activation step.</p></div>
+          <span class="arrow">↗</span>
+        </a>
+      </section>
+
+      <section class="trust-strip">
+        <div><span>●</span><strong>Real-time</strong><small>Dashboard metrics</small></div>
+        <div><span>●</span><strong>Simple</strong><small>Guided workflows</small></div>
+        <div><span>●</span><strong>Responsive</strong><small>Desktop & mobile</small></div>
+        <div><span>●</span><strong>Connected</strong><small>Spring Boot + MySQL</small></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><strong>SIMPulse</strong><span>Modern SIM operations made simple.</span></div>
+      <span>© 2026 SIM Activation Portal</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

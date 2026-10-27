@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Address Update | SIMPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar compact-topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span><strong>SIMPulse</strong><small>Activation Portal</small></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Overview</a><a href="customer.html">Customer</a><a href="validation.html">SIM Management</a><a href="offers.html">Offers</a><a href="address.html" class="active">Address</a><a href="id-proof.html">ID Proof</a><a href="activation.html">Activate</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div><p class="eyebrow">Step 03A</p><h1>Update address</h1><p>Keep the registered customer address accurate with a simple guided form and a generated preview.</p></div>
+        <div class="banner-badge green-badge"><span>03</span><strong>Address</strong><small>Customer details</small></div>
+      </section>
+
+      <section class="content-grid two-column">
+        <div class="panel form-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Address record</p><h2>Update customer address</h2></div><span class="secure-badge">● Existing customer</span></div>
+          <div class="form-grid">
+            <div class="field full"><label for="id">Customer ID</label><input id="id" type="number" placeholder="Enter existing customer ID"></div>
+            <div class="field"><label for="houseNo">House / Flat Number</label><input id="houseNo" type="text" placeholder="e.g. 24-B"></div>
+            <div class="field"><label for="street">Street / Area</label><input id="street" type="text" placeholder="e.g. Anna Nagar"></div>
+            <div class="field"><label for="city">City</label><input id="city" type="text" placeholder="Enter city"></div>
+            <div class="field"><label for="state">State</label><input id="state" type="text" placeholder="Enter state"></div>
+            <div class="field"><label for="pincode">Pincode</label><input id="pincode" type="text" placeholder="6-digit pincode" inputmode="numeric" maxlength="6"></div>
+            <div class="field full"><label for="proofType">Address Proof Type</label><select id="proofType"><option value="">Select proof type</option><option>Aadhaar Card</option><option>Utility Bill</option><option>Bank Statement</option><option>Rental Agreement</option></select></div>
+            <div class="field full"><label for="address">Generated Address</label><textarea id="address" placeholder="Your complete address will appear here"></textarea></div>
+          </div>
+          <button class="btn btn-primary" type="button" onclick="prepareAndUpdateAddress()">Save Updated Address <span>→</span></button>
+          <div id="responseBox" class="response" role="status" aria-live="polite"></div>
+        </div>
+
+        <aside class="panel preview-panel">
+          <div class="preview-top"><span class="preview-icon">⌂</span><div><p class="eyebrow">Live preview</p><h2>Address card</h2></div></div>
+          <div class="address-preview" id="addressPreview"><span>No address entered yet.</span></div>
+          <div class="proof-card"><span>Proof type</span><strong id="proofPreview">Not selected</strong></div>
+          <div class="proof-card"><span>Customer ID</span><strong id="customerPreview">—</strong></div>
+          <div class="tip-box"><strong>Before saving</strong><p>Make sure the customer ID belongs to an existing record and the generated address is complete.</p></div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div><strong>SIMPulse</strong><span>Modern SIM operations made simple.</span></div><span>© 2026 SIM Activation Portal</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
